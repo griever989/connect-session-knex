@@ -8,7 +8,8 @@ module.exports = function(connect) {
 	/**
 	* Connect's Store.
 	*/
-	var Store = (connect.session) ? connect.session.Store : connect.Store;
+	var session = require('express-session');
+	var Store = session.Store;
 
 	/*
 	* Return datastore appropriate string of the current time
